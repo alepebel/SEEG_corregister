@@ -1,3 +1,4 @@
+% Alexis Pérez Bellido (2021)
 % To use this script you only need to loop over the participants folders loading the file with the localised electrodes and the preimplantation T1 anat scans.
 
 
