@@ -1,9 +1,11 @@
 ft_defaults
 
-
+subjID = 's02'
 % here is where i stored the folders with the dicom data
-path_dir = '/Users/alex/Dropbox/Projects/Predcision/Raw/sub_01/anat/dicom/' 
-
+%path_dir = '/Users/alex/Dropbox/Projects/Predcision/Raw/S01/anat/dicom/' 
+%path_dir =  '/Volumes/ALEX_EXT/dicom/'
+%path_dir = ['/home/alex/Dropbox/Projects/Predcision/Raw/',subjID,'/anat/'];
+path_dir = ['/Users/alex/Dropbox/Projects/Predcision/Raw/',subjID,'/anat'] 
 % lets list the folders within the dicom folder to find the dicoms inside
 fnames = get_subfolders(path_dir)
 
@@ -15,7 +17,7 @@ for ixfname = 1 : length(fnames) % explore first level of the folder jerarchy
         
         scan_path_dir = fullfile(sub_path_dir, ffnames(ixxfname).name);
         dicom_files = dir(scan_path_dir);
-        dicom_path = fullfile(scan_path_dir, dicom_files(3).name);
+        dicom_path = fullfile(scan_path_dir, dicom_files(5).name);
         
         %% Reading dicom and writting nifti files in folders
         
